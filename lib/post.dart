@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:future_builder_ex/mock_data/images.dart';
 import 'package:future_builder_ex/mock_data/post.dart';
 import 'package:future_builder_ex/picture.dart';
 
@@ -12,7 +11,7 @@ class PostView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('포스트'),
+        title: const Text('포스트'),
       ),
       body: Column(
         children: [
@@ -55,7 +54,7 @@ class PostView extends StatelessWidget {
 
                   final posts = snapshot.data!;
 
-                  if (images.isEmpty) {
+                  if (posts.isEmpty) {
                     return const Center(
                       child: Text('데이터가 0개입니다'),
                     );
